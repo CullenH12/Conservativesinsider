@@ -13,86 +13,116 @@
             color: #222;
         }
         .container {
-            width: 90%;
-            max-width: 800px;
+            width: 95%;
+            max-width: 900px;
             margin: 20px auto;
             background: white;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
+            padding: 25px;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
         header {
-            background: #333;
+            background: #222;
             color: white;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
-            font-size: 24px;
+            font-size: 26px;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
+            border-radius: 8px 8px 0 0;
         }
         nav {
-            background: #eee;
-            padding: 10px;
+            background: #ddd;
+            padding: 12px;
             text-align: center;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            gap: 12px;
         }
         nav a {
-            margin: 5px 10px;
-            color: #333;
+            color: #222;
             text-decoration: none;
             font-weight: bold;
+            padding: 10px 15px;
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            background: #bbb;
         }
         .ticker {
             background: #444;
             color: white;
-            padding: 10px;
+            padding: 12px;
             font-size: 14px;
             overflow: hidden;
             white-space: nowrap;
             font-weight: bold;
+            border-radius: 0 0 8px 8px;
         }
         .ticker span {
             display: inline-block;
-            animation: ticker 15s linear infinite;
+            animation: ticker 12s linear infinite;
         }
         @keyframes ticker {
             0% { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
         }
         .article-title {
-            font-size: 28px;
+            font-size: 30px;
             font-weight: bold;
             margin: 20px 0;
-            color: #222;
+            color: #111;
+            text-align: center;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
         }
         .article-content {
-            font-size: 16px;
-            line-height: 1.6;
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: justify;
         }
         img {
             width: 100%;
             height: auto;
             border-radius: 5px;
             margin-bottom: 15px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
         }
-        .sidebar {
+        .sidebar, .poll, .comments {
             background: #f8f8f8;
-            padding: 15px;
-            border-radius: 5px;
+            padding: 18px;
+            border-radius: 6px;
             margin-top: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .poll, .comments {
-            background: #f8f8f8;
-            padding: 15px;
+        .poll h3, .comments h3, .sidebar h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #111;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .poll-result {
+            font-size: 18px;
+            margin-top: 10px;
+            background: #fff;
+            padding: 10px;
             border-radius: 5px;
-            margin-top: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .poll-result span {
+            font-weight: bold;
+            color: #222;
         }
         .footer {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 25px;
             color: gray;
             font-size: 14px;
             padding-bottom: 10px;
@@ -111,7 +141,7 @@
     </nav>
     
     <div class="ticker">
-        <span>  BREAKING: Governor Calls Emergency Meeting Over SAFETY Act  </span>
+        <span> 🚨 BREAKING: Governor Calls Emergency Meeting Over SAFETY Act 🚨 </span>
     </div>
 
     <div class="container">
@@ -120,10 +150,14 @@
              alt="California Capitol building with flag">
         <div class="article-content">
             <p>Sacramento, CA – A controversial bill known as the SAFETY Act is being fast-tracked through California’s legislature, raising **serious concerns about parental rights, student privacy, and the growing influence of state control in education.**</p>
-            <p>Critics argue that the bill is an attempt to **centralize power**, allowing the government to collect data on students without parental consent. Some experts warn that such policies could pave the way for a future where **student records are monitored and controlled beyond traditional oversight.**</p>
-            <p>Supporters claim that the bill is necessary for ensuring student safety, but parents’ rights organizations fear that **this is just the beginning of greater government overreach.**</p>
         </div>
         
+        <div class="poll">
+            <h3>Poll Closed: Public Opinion on the SAFETY Act</h3>
+            <div class="poll-result">✅ <span>Yes:</span> 38% (12,456 votes)</div>
+            <div class="poll-result">❌ <span>No:</span> 62% (19,782 votes)</div>
+        </div>
+
         <div class="sidebar">
             <h3>Trending Stories</h3>
             <ul>
@@ -133,13 +167,6 @@
             </ul>
         </div>
 
-        <div class="poll">
-            <h3>Do you support the SAFETY Act?</h3>
-            <button onclick="vote('Yes')">✅ Yes</button>
-            <button onclick="vote('No')">❌ No</button>
-            <p id="poll-results">Votes: Yes (45%) | No (55%)</p>
-        </div>
-
         <div class="comments">
             <h3>💬 Top Comments</h3>
             <div id="comment-section">
@@ -147,25 +174,7 @@
                 <div class="comment"><b>Susan Carter:</b> Elon is right. If they can do this in CA, what’s stopping them from trying it nationwide? </div>
                 <div class="comment"><b>David Thompson:</b> This is beyond politics—this is about our families. Stop the SAFETY Act before it’s too late!</div>
             </div>
-            <textarea id="user-comment" placeholder="Write a comment..." style="width: 100%; margin-top: 10px;"></textarea>
-            <button onclick="postComment()">Post Comment</button>
         </div>
     </div>
-    
-    <script>
-        function postComment() {
-            let commentBox = document.getElementById('user-comment');
-            let commentText = commentBox.value;
-            if (commentText.trim() !== "") {
-                let commentSection = document.getElementById('comment-section');
-                let newComment = document.createElement('div');
-                newComment.classList.add('comment');
-                newComment.innerHTML = `<b>You:</b> ${commentText}`;
-                commentSection.appendChild(newComment);
-                commentBox.value = "";
-            }
-        }
-    </script>
-
 </body>
 </html>
