@@ -20,6 +20,8 @@
             padding: 25px;
             box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            display: flex;
+            flex-direction: column;
         }
         header {
             background: #222;
@@ -126,6 +128,24 @@
             color: gray;
             font-size: 14px;
             padding-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                width: 100%;
+                text-align: center;
+            }
+            .article-title {
+                font-size: 24px;
+            }
+            .article-content {
+                font-size: 16px;
+            }
+            .container {
+                padding: 15px;
+            }
         }
     </style>
 </head>
