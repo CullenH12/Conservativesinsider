@@ -6,80 +6,60 @@
     <title>Government Surveillance: How Much Are They Watching?</title>
     <style>
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Times New Roman', serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background-color: #f9f9f9;
             color: #222;
             overflow-x: hidden;
         }
         .container {
-            width: 95%;
-            max-width: 900px;
-            margin: 20px auto;
+            width: 85%;
+            max-width: 800px;
+            margin: 40px auto;
             background: white;
-            padding: 25px;
+            padding: 30px;
             box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
         }
         header {
-            background: #222;
-            color: white;
-            padding: 20px;
+            background: white;
+            color: black;
+            padding: 15px;
             text-align: center;
-            font-size: 26px;
+            font-size: 32px;
             font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 8px 8px 0 0;
-            width: 100%;
-            box-sizing: border-box;
+            border-bottom: 3px solid black;
         }
         nav {
-            background: #ddd;
-            padding: 12px;
+            background: white;
             text-align: center;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            width: 100%;
-            box-sizing: border-box;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
         }
         nav a {
-            color: #222;
+            color: black;
             text-decoration: none;
             font-weight: bold;
-            padding: 10px 15px;
-            background: white;
-            border-radius: 6px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            flex: 1;
-            text-align: center;
-            min-width: 120px;
+            padding: 12px 15px;
+            font-size: 16px;
+            text-transform: uppercase;
         }
         nav a:hover {
-            background: #bbb;
+            text-decoration: underline;
         }
         .article-title {
-            font-size: 30px;
+            font-size: 36px;
             font-weight: bold;
-            margin: 20px 0;
-            color: #111;
+            margin: 30px 0;
             text-align: center;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
+            line-height: 1.2;
         }
         .article-meta {
-            color: gray;
-            font-size: 14px;
-            margin-bottom: 10px;
+            color: #555;
+            font-size: 16px;
             text-align: center;
+            margin-bottom: 20px;
+            font-style: italic;
         }
         .article-content {
             font-size: 18px;
@@ -90,60 +70,49 @@
             width: 100%;
             height: auto;
             border-radius: 5px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
         }
-        .sidebar, .comments {
-            background: #f8f8f8;
-            padding: 18px;
-            border-radius: 6px;
-            margin-top: 20px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .sidebar h3, .comments h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #111;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
+        .quote {
+            font-style: italic;
+            color: #b22222;
+            font-weight: bold;
+            padding: 10px;
+            border-left: 5px solid #b22222;
+            margin: 20px 0;
+            background: #f8d7da;
         }
         .footer {
             text-align: center;
-            margin-top: 25px;
+            margin-top: 40px;
             color: gray;
             font-size: 14px;
-            padding-bottom: 10px;
+            padding-bottom: 20px;
         }
-
-        /* 🌟 Mobile-Friendly Styles */
+        
+        /* 🌟 Mobile Styles */
         @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-            nav a {
-                width: 90%;
-                text-align: center;
-                padding: 8px 12px;
-                min-width: 80px;
+            .container {
+                width: 95%;
+                padding: 20px;
             }
             .article-title {
-                font-size: 24px;
+                font-size: 28px;
             }
             .article-content {
                 font-size: 16px;
             }
-            .container {
-                width: 100%;
-                padding: 15px;
-                border-radius: 0;
-            }
-            .logo {
-                max-width: 100px; /* Smaller size for mobile */
-            }
             header {
-                font-size: 22px;
-                padding: 15px;
+                font-size: 28px;
+            }
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                display: block;
+                padding: 8px;
             }
         }
     </style>
@@ -171,9 +140,9 @@
 
             <p>According to the whistleblower, <strong>every phone call, text message, and email</strong> sent by law-abiding Americans is <strong>monitored, categorized, and stored in a secret underground data center</strong> somewhere in Utah. The revelations have sent shockwaves through the country, <strong>confirming the worst fears of privacy advocates and conservative watchdogs</strong>.</p>
 
-            <blockquote style="font-style: italic; color: #b22222; font-weight: bold; padding: 10px; border-left: 5px solid #b22222; background: #f8d7da;">
+            <div class="quote">
                 "They’re not just watching criminals – they’re watching all of us," said Senator Mike Hawthorne (R-TX). "The Biden administration has taken Big Brother to a whole new level."
-            </blockquote>
+            </div>
 
             <h3>AI-Powered Tracking and Censorship</h3>
             <p>Documents reviewed by <em>Conservatives Insider</em> indicate that the <strong>NSA, in coordination with Silicon Valley tech giants</strong>, has developed <strong>a powerful AI system</strong> designed to monitor "problematic" speech.</p>
@@ -189,15 +158,6 @@
             <p>In response, conservative lawmakers have introduced the <strong>"Defend Our Privacy Act" (DOPA)</strong>, which aims to <strong>shut down mass surveillance programs</strong> and hold Big Tech accountable.</p>
 
             <p><strong>Is this the beginning of a new digital dictatorship?</strong> Only time will tell.</p>
-        </div>
-
-        <div class="comments">
-            <h3>💬 Top Comments</h3>
-            <div id="comment-section">
-                <div class="comment"><b>John Mitchell:</b> They’re trying to control us! We must fight back before it’s too late!</div>
-                <div class="comment"><b>Susan Carter:</b> How do we know this isn’t already happening? Look at how much power Big Tech has...</div>
-                <div class="comment"><b>David Thompson:</b> If we don’t take a stand now, our kids will grow up in a surveillance state.</div>
-            </div>
         </div>
     </div>
     
