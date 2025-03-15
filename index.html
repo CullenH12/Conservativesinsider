@@ -138,7 +138,11 @@
             }
         
             .header-title {
-                font-size: 1.2rem;
+                font-size: 1rem; /* Reduce font size */
+                max-width: 60%; /* Limit width */
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; /* Add ellipsis for overflow */
             }
         
             .menu-toggle {
@@ -168,15 +172,6 @@
         
 
         /* Other Page Elements */
-        /* Title inside header */
-        .header-title {
-            flex: 1;
-            text-align: center;
-            font-size: 1.8rem;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
         .ticker {
             background: #444;
             color: white;
