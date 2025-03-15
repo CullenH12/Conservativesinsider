@@ -4,6 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conservatives Insider - Trending</title>
+    
+    <!-- Google Font for Title (Oswald) -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Meta Description for SEO -->
+    <meta name="description" content="Breaking news, investigations, and political analysis from Conservatives Insider. Stay informed on major policy debates, elections, and controversial legislation.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/cullenh12/Conservativesinsider/main/favicon-32x32.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Website",
+      "name": "Conservatives Insider",
+      "url": "https://conservativesinsider.com",
+      "logo": "https://raw.githubusercontent.com/cullenh12/Conservativesinsider/main/image0 (2).jpg",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Conservatives Insider"
+      }
+    }
+    </script>
+    
     <style>
         body {
             font-family: 'Georgia', serif;
@@ -26,31 +51,79 @@
             flex-direction: column;
             justify-content: center;
         }
+        /* HEADER FIX */
         header {
             background: #222;
             color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 26px;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 22px;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
             border-radius: 8px 8px 0 0;
             width: 100%;
             box-sizing: border-box;
+            position: relative;
         }
+        
+        /* LOGO FIX */
+        .logo {
+            max-width: 120px; /* Default size */
+            height: auto;
+        }
+        
+        /* HEADER TITLE */
+
+        .header-title {
+            font-size: 2rem; /* Large but balanced */
+            font-weight: 700; /* Professional and strong */
+            font-family: 'Oswald', serif; /* Elegant and authoritative */
+            text-transform: uppercase; /* News-style emphasis */
+            letter-spacing: 1.2px; /* Just enough space for clarity */
+            text-align: center;
+            max-width: 60%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #fdfdfd; /* Clean, subtle contrast */
+            background: #1a1a1a; /* Darker, sleeker background */
+            padding: 12px 20px;
+            border-radius: 5px; /* Softer edges */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Deep but subtle shadow */
+            border-bottom: 3px solid rgba(255, 255, 255, 0.2); /* Elegant underline effect */
+        }
+
+                
+        /* MENU BUTTON (MOBILE) */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: white;
+        }
+        
+        /* NAVIGATION */
         nav {
             background: #ddd;
             padding: 12px;
             text-align: center;
+            box-sizing: border-box;
+        }
+        
+        .nav-links {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 12px;
-            width: 100%;
-            box-sizing: border-box;
+            padding: 0;
         }
-        nav a {
+        
+        .nav-links a {
             color: #222;
             text-decoration: none;
             font-weight: bold;
@@ -59,13 +132,82 @@
             border-radius: 6px;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            flex: 1;
             text-align: center;
             min-width: 120px;
         }
-        nav a:hover {
+        
+        .nav-links a:hover {
             background: #bbb;
         }
+        
+        /* MOBILE STYLES */
+        @media (max-width: 900px) {
+             header {
+                width: 100%; /* Prevents it from being wider than screen */
+                max-width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px 15px;
+                box-sizing: border-box;
+                margin: 0;
+            }
+            .container {
+                width: 100%; /* Makes sure it aligns with header */
+                max-width: 100%; /* Prevents overflow */
+                padding: 15px; /* Adjusts spacing */
+                margin: 0 auto; /* Keeps it centered */
+                box-sizing: border-box; /* Ensures padding doesn’t affect width */
+            }
+            .logo {
+                max-width: 80px; /* Smaller logo on mobile */
+            }
+            .header-title {
+                font-size: 1.2rem; /* Slightly larger for better visibility */
+                font-weight: bold; /* Make it stand out */
+                font-family: 'Merriweather', serif; /* A more elegant news-style font */
+                text-transform: uppercase; /* Give it a strong presence */
+                letter-spacing: 1px; /* Improve spacing */
+                text-align: center;
+                max-width: 60%; /* Ensure it doesn't stretch too wide */
+                white-space: normal;
+                overflow: hidden;
+                word-wrap: break-word;
+            }
+            .menu-toggle {
+                display: block;
+            }
+
+            html, body {
+                width: 100%;
+                overflow-x: hidden;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                background: #ddd;
+                padding: 10px 0;
+            }
+        
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 12px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        
+
+        /* Other Page Elements */
         .ticker {
             background: #444;
             color: white;
@@ -105,88 +247,26 @@
             margin-bottom: 15px;
             box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
         }
-        .sidebar, .poll, .comments {
-            background: #f8f8f8;
-            padding: 18px;
-            border-radius: 6px;
-            margin-top: 20px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .poll h3, .comments h3, .sidebar h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #111;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
-        }
-        .logo {
-            display: block;
-            max-width: 120px; /* Adjust size as needed */
-            height: auto;
-            margin: 0 auto;
-        }
 
-        .poll-result {
-            font-size: 18px;
-            margin-top: 10px;
-            background: #fff;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .poll-result span {
-            font-weight: bold;
-            color: #222;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 25px;
-            color: gray;
-            font-size: 14px;
-            padding-bottom: 10px;
-        }
-        @media (max-width: 768 pixels) {
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-            nav a {
-                width: auto;
-                text-align: center;
-                padding: 6px 10px;
-                min-width: 60px;
-            }
-            .article-title {
-                font-size: 24px;
-            }
-            .article-content {
-                font-size: 16px;
-            }
-            .container {
-                width: 100%;
-                padding: 15px;
-                border-radius: 0;
-            }
-            .logo {
-                max-width: 90px; /* Smaller size for mobile */
-            }
-            header {
-                font-size: 22px;
-                padding: 15px;
-            }
-        }
     </style>
 </head>
 <body>
 
-    <header>Conservatives Insider</header>
+    <header>
+        <img src="https://raw.githubusercontent.com/cullenh12/Conservativesinsider/main/image0.png" 
+             alt="Conservatives Insider Logo" class="logo">
+        <span class="header-title">Conservatives Insider</span>
+        <button class="menu-toggle">☰</button>
+    </header>
+    <!-- Navigation Menu -->
     <nav>
-        <a href="index.html">Home</a>
-        <a href="Politics.html">Politics</a>
-        <a href="opinion.html">Opinion</a>
-        <a href="investigations.html">Investigations</a>
-        <a href="trending.html">Trending</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="Politics.html">Politics</a>
+            <a href="opinion.html">Opinion</a>
+            <a href="investigations.html">Investigations</a>
+            <a href="trending.html">Trending</a>
+        </div>
     </nav>
     
     <div class="container">
@@ -203,5 +283,12 @@
             <p><a href="terms.html" style="color: #222; text-decoration: none; font-weight: bold;">Terms of Use & Privacy Policy</a></p>
         </div>
     </div>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+    </script>
+    
 </body>
 </html>
