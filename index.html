@@ -165,13 +165,17 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
+                width: 100%;
+                box-sizing: border-box;
             }
             nav a {
-                width: auto;
+                flex: 1;
                 text-align: center;
-                padding: 6px 10px;
-                min-width: 60px;
+                padding: 8px 12px;
+                min-width: 90px; /* Prevents buttons from stretching too wide */
+                max-width: 160px; /* Stops them from being too large */
             }
+
             .article-title {
                 font-size: 24px;
             }
