@@ -170,17 +170,21 @@
             box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
         }
         .logo {
-            display: block;
-            max-width: 150px; /* Set max size */
+            position: absolute;
+            top: 10px;  /* Adjust vertical placement */
+            left: 20px; /* Adjust horizontal placement */
+            max-width: 120px; /* Set appropriate max width */
             height: auto;
-            margin: 10px auto;
+            background: none; /* Ensure transparent background */
         }
+
     </style>
 </head>
 <body>
 
-    <img src="https://raw.githubusercontent.com/cullenh12/Conservativesinsider/main/image0.png" alt="Conservatives Insider Logo" class="logo">
+    
     <header>
+        <img src="https://raw.githubusercontent.com/cullenh12/Conservativesinsider/main/image0.png" alt="Conservatives Insider Logo" class="logo">
         Conservatives Insider
         <!-- Hamburger Button -->
         <button class="menu-toggle">☰</button>
