@@ -143,8 +143,13 @@
         /* MOBILE STYLES */
         @media (max-width: 768px) {
             header {
-                font-size: 18px;
-                padding: 10px;
+                width: 100vw; /* Ensures full width */
+                max-width: 100%; /* Prevents any shrinking */
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px; /* Keeps spacing balanced */
+                box-sizing: border-box; /* Ensures padding doesn’t affect width */
             }
         
             .logo {
