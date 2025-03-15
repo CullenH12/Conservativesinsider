@@ -74,15 +74,14 @@
         
         /* HEADER TITLE */
         .header-title {
-            flex: 1;
+            font-size: 1.8rem; /* Larger on bigger screens */
+            font-weight: 700;
+            font-family: 'Merriweather', serif;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
             text-align: center;
-            font-size: 1.5rem;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            padding: 0 10px; /* Ensure spacing */
         }
-        
+                
         /* MENU BUTTON (MOBILE) */
         .menu-toggle {
             display: none;
@@ -138,12 +137,16 @@
             }
         
             .header-title {
-                font-size: 1rem; /* Reduce font size */
-                max-width: 50%; /* Limit width */
+                font-size: 1.2rem; /* Slightly larger for better visibility */
+                font-weight: bold; /* Make it stand out */
+                font-family: 'Merriweather', serif; /* A more elegant news-style font */
+                text-transform: uppercase; /* Give it a strong presence */
+                letter-spacing: 1px; /* Improve spacing */
                 text-align: center;
-                word-wrap: break-word; /* Allow breaking */
-                white-space: normal; /* Allow wrapping */
+                max-width: 55%; /* Ensure it doesn't stretch too wide */
+                white-space: normal;
                 overflow: hidden;
+                word-wrap: break-word;
             }
         
             .menu-toggle {
