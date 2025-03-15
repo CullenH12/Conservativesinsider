@@ -48,14 +48,15 @@
             flex-direction: column;
             justify-content: center;
         }
+        /* HEADER FIX */
         header {
             background: #222;
             color: white;
-            padding: 10px 20px; /* Adjusted padding */
+            padding: 10px 15px;
             display: flex;
             align-items: center;
-            justify-content: space-between; /* Space between elements */
-            font-size: 24px;
+            justify-content: space-between;
+            font-size: 22px;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -64,8 +65,25 @@
             box-sizing: border-box;
             position: relative;
         }
-
-        /* Hamburger Menu Button */
+        
+        /* LOGO FIX */
+        .logo {
+            max-width: 120px; /* Default size */
+            height: auto;
+            display: block;
+        }
+        
+        /* HEADER TITLE */
+        .header-title {
+            flex: 1;
+            text-align: center;
+            font-size: 1.5rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        /* MENU BUTTON (MOBILE) */
         .menu-toggle {
             display: none;
             background: none;
@@ -73,12 +91,9 @@
             font-size: 28px;
             cursor: pointer;
             color: white;
-            position: absolute;
-            top: 15px;
-            right: 20px;
         }
-
-        /* Navigation Styles */
+        
+        /* NAVIGATION */
         nav {
             background: #ddd;
             padding: 12px;
@@ -107,25 +122,29 @@
         .nav-links a:hover {
             background: #bbb;
         }
-
-        /* Mobile Styles */
+        
+        /* MOBILE STYLES */
         @media (max-width: 768px) {
-             header {
-                font-size: 20px; /* Smaller font for mobile */
-                padding: 10px 15px; /* Adjust padding */
+            header {
+                font-size: 18px; /* Adjust header text size */
+                padding: 10px 10px; /* Reduce padding */
                 flex-direction: row;
                 justify-content: space-between;
             }
+        
             .logo {
-                max-width: 50px; /* Shrink logo for mobile */
+                max-width: 80px; /* Shrink logo for mobile */
             }
+        
             .header-title {
-                font-size: 1.5rem; /* Adjust title size */
+                font-size: 1.2rem; /* Adjust title size */
                 text-align: center;
             }
+        
             .menu-toggle {
                 display: block;
             }
+        
             .nav-links {
                 display: none;
                 flex-direction: column;
@@ -134,9 +153,11 @@
                 background: #ddd;
                 padding: 10px 0;
             }
+        
             .nav-links.show {
                 display: flex;
             }
+        
             .nav-links a {
                 padding: 12px;
                 width: 100%;
@@ -144,6 +165,7 @@
                 max-width: none;
             }
         }
+        
 
         /* Other Page Elements */
         /* Title inside header */
@@ -193,11 +215,6 @@
             border-radius: 5px;
             margin-bottom: 15px;
             box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        .logo {
-            max-width: 140px; /* Default size */
-            height: auto;
-            display: block;
         }
 
     </style>
