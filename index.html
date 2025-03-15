@@ -143,19 +143,21 @@
         /* MOBILE STYLES */
         @media (max-width: 900px) {
              header {
-                width: 100vw; /* Ensure full width */
+                width: 100%; /* Prevents it from being wider than screen */
                 max-width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                padding: 10px 20px 10px 10px; /* Added right padding */
+                padding: 10px 15px;
                 box-sizing: border-box;
-                margin: 0 auto;
+                margin: 0;
             }
             .container {
-                width: 100vw; /* Uses full screen width */
-                max-width: 100%; /* Prevents it from being too wide */
-                padding: 15px; /* Adjusts padding for mobile */
+                width: 100%; /* Makes sure it aligns with header */
+                max-width: 100%; /* Prevents overflow */
+                padding: 15px; /* Adjusts spacing */
+                margin: 0 auto; /* Keeps it centered */
+                box-sizing: border-box; /* Ensures padding doesn’t affect width */
             }
             .logo {
                 max-width: 80px; /* Smaller logo on mobile */
@@ -167,13 +169,20 @@
                 text-transform: uppercase; /* Give it a strong presence */
                 letter-spacing: 1px; /* Improve spacing */
                 text-align: center;
-                max-width: 55%; /* Ensure it doesn't stretch too wide */
-                white-space: normal;
+                max-width: 60%; /* Ensure it doesn't stretch too wide */
+                white-space: nowrap;
                 overflow: hidden;
                 word-wrap: break-word;
             }
             .menu-toggle {
                 display: block;
+            }
+
+            html, body {
+                width: 100%;
+                overflow-x: hidden;
+                margin: 0;
+                padding: 0;
             }
             
             .nav-links {
