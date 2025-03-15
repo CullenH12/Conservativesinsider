@@ -143,37 +143,40 @@
         /* MOBILE STYLES */
         @media (max-width: 768px) {
             header {
-                width: 100vw; /* Ensure full width */
+                width: 100vw; /* Ensure it spans full width */
                 max-width: 100%;
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
-                padding: 10px 20px 10px 10px; /* Added right padding */
+                justify-content: center; /* Centers everything */
+                padding: 10px 15px;
                 box-sizing: border-box;
-                margin: 0 auto;
+                position: relative;
             }
         
             .logo {
-                max-width: 80px; /* Smaller logo on mobile */
+                max-width: 60px; /* Adjust for smaller screens */
+                height: auto;
+                position: absolute;
+                left: 10px; /* Keeps it from shifting */
             }
         
             .header-title {
-                font-size: 1.2rem; /* Slightly larger for better visibility */
-                font-weight: bold; /* Make it stand out */
-                font-family: 'Merriweather', serif; /* A more elegant news-style font */
-                text-transform: uppercase; /* Give it a strong presence */
-                letter-spacing: 1px; /* Improve spacing */
+                font-size: 1.3rem;
+                font-weight: bold;
                 text-align: center;
-                max-width: 55%; /* Ensure it doesn't stretch too wide */
-                white-space: normal;
+                flex: 1; /* Takes up remaining space */
+                max-width: 70%;
+                white-space: nowrap;
                 overflow: hidden;
-                word-wrap: break-word;
+                text-overflow: ellipsis;
             }
         
             .menu-toggle {
                 display: block;
+                font-size: 24px;
+                position: absolute;
+                right: 10px; /* Prevents shifting */
             }
-        
             .nav-links {
                 display: none;
                 flex-direction: column;
