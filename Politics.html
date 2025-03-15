@@ -27,6 +27,7 @@
         "name": "Conservatives Insider"
       }
     }
+    </script>
     
     <style>
         body {
@@ -287,7 +288,12 @@
 </head>
 <body>
 
-    <header>Conservatives Insider</header>
+    <header>
+         <img src="https://raw.githubusercontent.com/cullenh12/Conservativesinsider/main/image0.png" 
+             alt="Conservatives Insider Logo" class="logo">
+        <span class="header-title">Conservatives Insider</span>
+        <button class="menu-toggle">☰</button>
+    </header>
     <nav>
         <a href="index.html">Home</a>
         <a href="Politics.html">Politics</a>
@@ -329,5 +335,12 @@
             <p><a href="terms.html" style="color: #222; text-decoration: none; font-weight: bold;">Terms of Use & Privacy Policy</a></p>
         </div>
     </div>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+    </script>
+    
 </body>
 </html>
