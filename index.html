@@ -142,41 +142,35 @@
         
         /* MOBILE STYLES */
         @media (max-width: 768px) {
-            header {
-                width: 100vw; /* Ensure it spans full width */
+             header {
+                width: 100vw; /* Ensure full width */
                 max-width: 100%;
                 display: flex;
                 align-items: center;
-                justify-content: center; /* Centers everything */
-                padding: 10px 15px;
+                justify-content: space-between;
+                padding: 10px 20px 10px 10px; /* Added right padding */
                 box-sizing: border-box;
-                position: relative;
+                margin: 0 auto;
             }
-        
             .logo {
-                max-width: 60px; /* Adjust for smaller screens */
-                height: auto;
-                position: absolute;
-                left: 10px; /* Keeps it from shifting */
+                max-width: 80px; /* Smaller logo on mobile */
             }
-        
             .header-title {
-                font-size: 1.3rem;
-                font-weight: bold;
+                font-size: 1.2rem; /* Slightly larger for better visibility */
+                font-weight: bold; /* Make it stand out */
+                font-family: 'Merriweather', serif; /* A more elegant news-style font */
+                text-transform: uppercase; /* Give it a strong presence */
+                letter-spacing: 1px; /* Improve spacing */
                 text-align: center;
-                flex: 1; /* Takes up remaining space */
-                max-width: 70%;
-                white-space: nowrap;
+                max-width: 55%; /* Ensure it doesn't stretch too wide */
+                white-space: normal;
                 overflow: hidden;
-                text-overflow: ellipsis;
+                word-wrap: break-word;
             }
-        
             .menu-toggle {
                 display: block;
-                font-size: 24px;
-                position: absolute;
-                right: 10px; /* Prevents shifting */
             }
+            
             .nav-links {
                 display: none;
                 flex-direction: column;
@@ -189,7 +183,7 @@
             .nav-links.show {
                 display: flex;
             }
-        
+
             .nav-links a {
                 padding: 12px;
                 width: 100%;
