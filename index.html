@@ -143,13 +143,14 @@
         /* MOBILE STYLES */
         @media (max-width: 768px) {
             header {
-                width: 100vw; /* Ensures full width */
-                max-width: 100%; /* Prevents any shrinking */
+                width: 100vw; /* Force it to full viewport width */
+                max-width: 100%; /* Ensure no shrinking */
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                padding: 10px; /* Keeps spacing balanced */
-                box-sizing: border-box; /* Ensures padding doesn’t affect width */
+                padding: 10px;
+                box-sizing: border-box; /* Ensures padding doesn’t cause overflow */
+                margin: 0 auto; /* Centers the header */
             }
         
             .logo {
