@@ -74,13 +74,21 @@
         
         /* HEADER TITLE */
         .header-title {
-            font-size: 1.8rem; /* Larger on bigger screens */
-            font-weight: 700;
-            font-family: 'Merriweather', serif;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            text-align: center;
-        }
+        font-size: 2rem; /* Larger size for readability */
+        font-weight: 800; /* Make it bold but stylish */
+        font-family: 'Playfair Display', serif; /* Elegant, high-end font */
+        text-transform: uppercase; /* Strong, bold look */
+        letter-spacing: 2px; /* Better spacing for clarity */
+        text-align: center;
+        max-width: 60%; /* Prevents overflow */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        background: linear-gradient(90deg, #fff 20%, #ddd 80%); /* Subtle gradient effect */
+        padding: 10px 15px; /* Adds spacing */
+        border-radius: 5px; /* Softens edges */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adds a professional soft shadow */
+    }
                 
         /* MENU BUTTON (MOBILE) */
         .menu-toggle {
