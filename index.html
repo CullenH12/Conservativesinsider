@@ -51,10 +51,10 @@
         header {
             background: #222;
             color: white;
-            padding: 15px 20px; /* Less padding for better spacing */
+            padding: 10px 20px; /* Adjusted padding */
             display: flex;
             align-items: center;
-            justify-content: space-between; /* Space between logo and menu */
+            justify-content: space-between; /* Space between elements */
             font-size: 24px;
             font-weight: bold;
             text-transform: uppercase;
@@ -113,9 +113,15 @@
              header {
                 font-size: 20px; /* Smaller font for mobile */
                 padding: 10px 15px; /* Adjust padding */
+                flex-direction: row;
+                justify-content: space-between;
             }
             .logo {
                 max-width: 50px; /* Shrink logo for mobile */
+            }
+            .header-title {
+                font-size: 1.5rem; /* Adjust title size */
+                text-align: center;
             }
             .menu-toggle {
                 display: block;
@@ -140,6 +146,15 @@
         }
 
         /* Other Page Elements */
+        /* Title inside header */
+        .header-title {
+            flex: 1;
+            text-align: center;
+            font-size: 1.8rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
         .ticker {
             background: #444;
             color: white;
@@ -180,8 +195,9 @@
             box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
         }
         .logo {
-            max-width: 140px; /* Adjust for better scaling */
+            max-width: 140px; /* Default size */
             height: auto;
+            display: block;
         }
 
     </style>
@@ -190,9 +206,9 @@
 
     
     <header>
-        <img src="https://raw.githubusercontent.com/cullenh12/Conservativesinsider/main/image0.png" alt="Conservatives Insider Logo" class="logo">
-        Conservatives Insider
-        <!-- Hamburger Button -->
+        <img src="https://raw.githubusercontent.com/cullenh12/Conservativesinsider/main/image0.png" 
+             alt="Conservatives Insider Logo" class="logo">
+        <span class="header-title">Conservatives Insider</span>
         <button class="menu-toggle">☰</button>
     </header>
     <!-- Navigation Menu -->
