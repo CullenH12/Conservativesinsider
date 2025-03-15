@@ -61,18 +61,34 @@
             width: 100%;
             box-sizing: border-box;
         }
+        /* Hamburger Menu Button */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: white;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+
+        /* Navigation Styles */
         nav {
             background: #ddd;
             padding: 12px;
             text-align: center;
+            box-sizing: border-box;
+        }
+        .nav-links {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 12px;
-            width: 100%;
-            box-sizing: border-box;
+            padding: 0;
         }
-        nav a {
+        .nav-links a {
             color: #222;
             text-decoration: none;
             font-weight: bold;
@@ -81,12 +97,35 @@
             border-radius: 6px;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            flex: 1;
             text-align: center;
             min-width: 120px;
         }
-        nav a:hover {
+        .nav-links a:hover {
             background: #bbb;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                background: #ddd;
+                padding: 10px 0;
+            }
+            .nav-links.show {
+                display: flex;
+            }
+            .nav-links a {
+                padding: 12px;
+                width: 100%;
+                text-align: center;
+                max-width: none;
+            }
         }
         .ticker {
             background: #444;
@@ -168,52 +207,26 @@
             font-size: 14px;
             padding-bottom: 10px;
         }
-        @media (max-width: 768px) {
-            nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                width: 100%;
-                box-sizing: border-box;
-            }
-            nav a {
-                flex: 1;
-                text-align: center;
-                padding: 8px 12px;
-                min-width: 90px;
-                max-width: 160px;
-            }
-            .article-title {
-                font-size: 24px;
-            }
-            .article-content {
-                font-size: 16px;
-            }
-            .container {
-                width: 100%;
-                padding: 15px;
-                border-radius: 0;
-            }
-            .logo {
-                max-width: 90px; /* Smaller size for mobile */
-            }
-            header {
-                font-size: 22px;
-                padding: 15px;
-            }
+        
         }
     </style>
 </head>
 <body>
 
     <img src="https://raw.githubusercontent.com/cullenh12/Conservativesinsider/main/image0 (2).jpg" alt="Conservatives Insider Logo" class="logo">
-    <header>Conservatives Insider</header>
+    <header>
+        Conservatives Insider
+    <!-- Hamburger Button -->
+        <button class="menu-toggle">☰</button>
+    </header>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="Politics.html">Politics</a>
-        <a href="opinion.html">Opinion</a>
-        <a href="investigations.html">Investigations</a>
-        <a href="trending.html">Trending</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="Politics.html">Politics</a>
+            <a href="opinion.html">Opinion</a>
+            <a href="investigations.html">Investigations</a>
+            <a href="trending.html">Trending</a>
+        </div>
     </nav>
     
     <div class="ticker">
@@ -271,5 +284,11 @@
             <p><a href="terms.html" style="color: #222; text-decoration: none; font-weight: bold;">Terms of Use & Privacy Policy</a></p>
         </div>
     </div>
+
+     <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
